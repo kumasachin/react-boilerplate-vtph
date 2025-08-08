@@ -6,9 +6,9 @@ A no-nonsense React template that gets you coding fast. Everything you need, not
 
 ### Core Stack
 
-- **React 18** - The latest and greatest
-- **TypeScript** - Better code, fewer bugs
-- **Vite** - Fast builds, hot reloading that works
+- **React 19** - The latest and greatest with concurrent features
+- **TypeScript** - Better code, fewer bugs with enhanced strict mode
+- **Vite 7** - Lightning-fast builds with optimized code splitting
 - **Styled Components** - CSS-in-JS done right
 
 ### State & Data
@@ -16,6 +16,7 @@ A no-nonsense React template that gets you coding fast. Everything you need, not
 - **Zustand** - Simple state management
 - **Apollo Client** - GraphQL made easy
 - **React Router** - Client-side routing
+- **Zod + React Hook Form** - Runtime type validation with modern forms
 
 ### Testing Suite
 
@@ -26,9 +27,17 @@ A no-nonsense React template that gets you coding fast. Everything you need, not
 
 ### Developer Tools
 
-- **ESLint & Prettier** - Code formatting and linting
+- **Biome** - Ultra-fast Rust-based linter/formatter (replaces ESLint+Prettier)
+- **pnpm** - Fast, disk-efficient package manager
 - **Husky** - Git hooks for quality control
-- **TypeScript strict mode** - Better type safety
+- **TypeScript strict mode** - Enhanced type safety with latest features
+
+### Performance & Monitoring
+
+- **Web Vitals** - Core Web Vitals performance monitoring
+- **Bundle Analyzer** - Production optimization tools
+- **Error Boundaries** - Production-ready error handling
+- **Performance Tracking** - Custom analytics utilities
 
 ### Accessibility First
 
@@ -58,9 +67,20 @@ src/
 
 ## Getting Started
 
+### Prerequisites
+
+- **Node.js** >= 22.12.0 (for Vite 7 compatibility)
+- **pnpm** >= 9.0.0
+
 ```bash
-npm install
-npm run dev
+# Install pnpm if you haven't already
+npm install -g pnpm
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
 ```
 
 Open your browser to `http://localhost:5173`
@@ -69,6 +89,20 @@ Open your browser to `http://localhost:5173`
 
 ```bash
 # Development
+pnpm dev                    # Start development server
+pnpm build                  # Build for production
+pnpm preview               # Preview production build
+
+# Code Quality
+pnpm check                 # Run Biome linter/formatter check
+pnpm check:fix             # Auto-fix linting and formatting issues
+pnpm analyze               # Analyze bundle size
+
+# Testing
+pnpm test                  # Run unit tests
+pnpm test:ui               # Run tests with UI
+pnpm test:coverage         # Run tests with coverage
+pnpm test:e2e              # Run end-to-end tests
 npm run dev          # Start dev server
 npm run build        # Build for production
 npm run preview      # Preview production build
