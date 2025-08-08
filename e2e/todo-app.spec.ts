@@ -94,12 +94,12 @@ test.describe('Todo Application E2E Tests', () => {
 
     // Try to submit empty todo
     await page.getByRole('button', { name: 'Add Todo' }).click();
-    await expect(page.getByText('Come on, type something!')).toBeVisible();
+    await expect(page.getByText('Please enter a todo item')).toBeVisible();
 
     // Try to submit todo that's too short
     await page.getByPlaceholder('What do you need to do?').fill('Hi');
     await page.getByRole('button', { name: 'Add Todo' }).click();
-    await expect(page.getByText('Make it at least 3 characters')).toBeVisible();
+    await expect(page.getByText('Minimum 3 characters required')).toBeVisible();
   });
 
   test('should work with keyboard navigation', async ({ page }) => {
@@ -147,7 +147,7 @@ test.describe('SpaceX Launches Page', () => {
     expect(isStillLoading).toBe(false);
 
     // Should either show data or error, but not be stuck loading
-    const hasError = await page.getByText('Oops! Something went wrong').isVisible();
+    const hasError = await page.getByText('Failed to Load Data').isVisible();
     const hasData = await page.getByRole('heading', { name: 'Recent SpaceX Launches' }).isVisible();
 
     // One of these should be true (either successful load or graceful error handling)
