@@ -2,7 +2,7 @@
   "name": "react-starter-kit",
   "description": "A React starter template with TypeScript, testing, and all the good stuff. Auto-versioned and production-ready.",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
