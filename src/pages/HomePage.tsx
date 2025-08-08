@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import type React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Heading, Text, Button, Card, Flex, Spinner } from '../styles/components';
+import styled from 'styled-components';
 import { useAuthStore, useTodoStore } from '../store';
+import { Button, Card, Container, Flex, Heading, Spinner, Text } from '../styles/components';
 
 const Hero = styled.section`
   text-align: center;
@@ -159,8 +159,8 @@ export const HomePage: React.FC = () => {
           </Heading>
 
           <FeatureGrid>
-            {features.map((feature, index) => (
-              <FeatureCard key={index}>
+            {features.map(feature => (
+              <FeatureCard key={feature.title}>
                 <Heading level={4} style={{ marginBottom: '16px' }}>
                   {feature.title}
                 </Heading>

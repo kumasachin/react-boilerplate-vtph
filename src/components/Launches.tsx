@@ -1,9 +1,9 @@
-import React from 'react';
 import { useQuery } from '@apollo/client';
+import type React from 'react';
 import styled from 'styled-components';
 import { GET_LAUNCHES } from '../graphql/queries';
 import type { GetLaunchesData, GetLaunchesVariables } from '../graphql/types';
-import { Card, Flex, Text, Heading, Spinner } from '../styles/components';
+import { Card, Flex, Heading, Spinner, Text } from '../styles/components';
 
 const LaunchGrid = styled.div`
   display: grid;
@@ -75,6 +75,7 @@ export const Launches: React.FC<LaunchesProps> = ({ limit = 12 }) => {
         </Heading>
         <Text style={{ color: 'inherit', marginTop: '8px' }}>{error.message}</Text>
         <button
+          type="button"
           onClick={() => refetch()}
           style={{
             marginTop: '16px',
@@ -104,9 +105,9 @@ export const Launches: React.FC<LaunchesProps> = ({ limit = 12 }) => {
       <LaunchGrid>
         {launches.map(launch => (
           <LaunchCard
+            as="article"
             key={launch.id}
-            success={launch.launch_success}
-            role="article"
+            success={launch.launch_success ?? null}
             aria-label={`Launch: ${launch.mission_name}`}
           >
             <Flex gap="md" align="flex-start">
@@ -127,7 +128,7 @@ export const Launches: React.FC<LaunchesProps> = ({ limit = 12 }) => {
                   Rocket: {launch.rocket.rocket_name} ({launch.rocket.rocket_type})
                 </Text>
                 <Flex gap="sm" align="center">
-                  <div
+                  <span
                     style={{
                       width: '8px',
                       height: '8px',
@@ -139,13 +140,7 @@ export const Launches: React.FC<LaunchesProps> = ({ limit = 12 }) => {
                             ? '#dc3545'
                             : '#6c757d',
                     }}
-                    aria-label={
-                      launch.launch_success === true
-                        ? 'Successful launch'
-                        : launch.launch_success === false
-                          ? 'Failed launch'
-                          : 'Unknown status'
-                    }
+                    aria-hidden="true"
                   />
                   <Text size="sm" color="muted">
                     {launch.launch_success === true

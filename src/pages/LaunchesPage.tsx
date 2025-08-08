@@ -1,6 +1,6 @@
-import React from 'react';
-import { Container, Heading } from '../styles/components';
+import type React from 'react';
 import { Launches } from '../components/Launches';
+import { Container, Heading } from '../styles/components';
 
 export const LaunchesPage: React.FC = () => {
   return (

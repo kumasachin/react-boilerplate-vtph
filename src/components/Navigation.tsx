@@ -1,8 +1,8 @@
-import React from 'react';
+import type React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { useAuthStore } from '../store';
-import { Button, Flex, Text, Container } from '../styles/components';
+import { Button, Container, Flex, Text } from '../styles/components';
 
 const Nav = styled.nav`
   background-color: ${({ theme }) => theme.colors.white};
@@ -91,7 +91,7 @@ export const Navigation: React.FC = () => {
   };
 
   return (
-    <Nav role="navigation" aria-label="Main navigation">
+    <Nav as="nav" aria-label="Main navigation">
       <Container>
         <Flex align="center" justify="space-between">
           <Flex align="center" gap="xl">
