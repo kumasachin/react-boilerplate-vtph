@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { apolloClient } from './graphql/client';
 import { theme } from './styles/theme';
 import { Navigation } from './components/Navigation';
+import { Version } from './components/Version';
 import { HomePage } from './pages/HomePage';
 import { TodosPage } from './pages/TodosPage';
 import { LaunchesPage } from './pages/LaunchesPage';
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/about" element={<AboutPage />} />
               </Routes>
             </main>
+            <Version />
           </div>
         </Router>
       </ThemeProvider>
