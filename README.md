@@ -72,28 +72,31 @@ Then hit `http://localhost:5173` and you're off to the races.
 
 ## Scripts
 
-````bash
+```bash
+# Development
 npm run dev          # Start dev server
 npm run build        # Build for production
-npm run test         # Run tests
-npm run test:e2e     # E2E tests
-npm run lint         # Check code
+npm run preview      # Preview production build
 
-```bash
+# Testing
 npm test             # Run unit tests
 npm run test:ui      # Run tests with UI
 npm run test:coverage # Run tests with coverage
 npm run test:e2e     # Run end-to-end tests
 npm run test:e2e:ui  # Run e2e tests with UI
-````
 
-### Code Quality
-
-```bash
+# Code Quality
 npm run lint         # Check for linting errors
 npm run lint:fix     # Fix linting errors
 npm run format       # Format code with Prettier
 npm run format:check # Check code formatting
+
+# Versioning & Release
+npm run version:patch # Bump patch version (1.0.0 → 1.0.1)
+npm run version:minor # Bump minor version (1.0.0 → 1.1.0)
+npm run version:major # Bump major version (1.0.0 → 2.0.0)
+npm run release      # Full release process
+./scripts/release.sh # Complete release workflow
 ```
 
 ## 🧪 Testing Strategy
