@@ -1,76 +1,71 @@
-# React TypeScript Starter
+# React Starter Kit
 
-A modern React template that actually works out of the box. Built for developers who want to skip the setup and start building.
+A no-nonsense React template that gets you coding fast. Everything you need, nothing you don't.
 
-## What's Inside
+## What's Included
 
-### The Good Stuff
+### Core Stack
 
-- **React 18** - Because it's 2025 and we're not animals
-- **TypeScript** - Catch bugs before your users do
-- **Vite** - Blazing fast builds that don't make you wait
-- **Styled Components** - CSS that lives with your components
+- **React 18** - The latest and greatest
+- **TypeScript** - Better code, fewer bugs
+- **Vite** - Fast builds, hot reloading that works
+- **Styled Components** - CSS-in-JS done right
 
 ### State & Data
 
-- **Zustand** - State management without the boilerplate
-- **Apollo Client** - GraphQL that handles the hard parts
-- **React Router** - Navigation that just works
+- **Zustand** - Simple state management
+- **Apollo Client** - GraphQL made easy
+- **React Router** - Client-side routing
 
-### Testing That Doesn't Suck
+### Testing Suite
 
-- **Vitest** - Fast tests that actually run
-- **React Testing Library** - Test what users see, not implementation details
-- **Playwright** - E2E tests across real browsers
-- **Accessibility testing** - Because everyone deserves to use your app
+- **Vitest** - Modern testing framework
+- **React Testing Library** - Component testing
+- **Playwright** - End-to-end testing
+- **jest-axe** - Accessibility testing
 
-### Developer Experience
+### Developer Tools
 
-- **ESLint & Prettier** - Stop arguing about code style
-- **Husky** - Git hooks that keep the codebase clean
-- **TypeScript strict mode** - Embrace the red squiggles
+- **ESLint & Prettier** - Code formatting and linting
+- **Husky** - Git hooks for quality control
+- **TypeScript strict mode** - Better type safety
 
-### Built for Everyone
+### Accessibility First
 
-- Proper ARIA labels and keyboard navigation
-- Screen reader friendly
-- High contrast and reduced motion support
+- WCAG 2.1 AA compliant
+- Keyboard navigation support
+- Screen reader optimized
+- Proper semantic markup
 
-## Quick Start
+## Project Structure
 
 ```
 src/
+├── components/      # UI components
+│   ├── Navigation.tsx # Main navigation
+│   ├── TodoForm.tsx   # Todo input form
+│   ├── TodoList.tsx   # Todo list with filters
+│   └── Launches.tsx   # SpaceX data viewer
+├── pages/           # Page components
+│   ├── HomePage.tsx   # Landing page
+│   ├── TodosPage.tsx  # Todo application
+│   └── AboutPage.tsx  # Documentation
+├── store/           # Zustand stores
+├── graphql/         # Apollo setup
+├── styles/          # Theme and styled components
+└── __tests__/       # Test files
 ```
-
-src/
-├── components/ # UI components
-│ ├── Navigation.tsx # Main nav
-│ ├── TodoForm.tsx # Todo input
-│ ├── TodoList.tsx # Todo list with filters
-│ └── Launches.tsx # SpaceX data viewer
-├── pages/ # Page components
-│ ├── HomePage.tsx # Landing page
-│ ├── TodosPage.tsx # Todo app
-│ └── AboutPage.tsx # Docs
-├── store/ # Zustand stores
-├── graphql/ # Apollo setup
-├── styles/ # Theme and components
-└── **tests**/ # Test files
-
-````
 
 ## Getting Started
-
-You know the drill:
 
 ```bash
 npm install
 npm run dev
-````
+```
 
-Then hit `http://localhost:5173` and you're off to the races.
+Open your browser to `http://localhost:5173`
 
-## Scripts
+## Available Commands
 
 ```bash
 # Development
@@ -99,29 +94,29 @@ npm run release      # Full release process
 ./scripts/release.sh # Complete release workflow
 ```
 
-## 🧪 Testing Strategy
+## Testing
 
-### Unit Testing
+### Unit Tests
 
-- **Framework**: Vitest with React Testing Library
-- **Coverage**: Aim for >80% code coverage
-- **Focus**: Component logic, user interactions, edge cases
+- Built with Vitest and React Testing Library
+- Test components, hooks, and utilities
+- Run with `npm test`
 
-### End-to-End Testing
+### End-to-End Tests
 
-- **Framework**: Playwright
-- **Browsers**: Chromium, Firefox, WebKit
-- **Focus**: User workflows, navigation, form submissions
+- Powered by Playwright
+- Tests across Chrome, Firefox, and Safari
+- Run with `npm run test:e2e`
 
-### Accessibility Testing
+### Accessibility Tests
 
-- **Tool**: Jest-Axe
-- **Standards**: WCAG 2.1 AA compliance
-- **Coverage**: All interactive components
+- Automated with jest-axe
+- Ensures WCAG 2.1 AA compliance
+- Runs with unit tests
 
-## 🎨 Styling System
+## Styling
 
-### Theme Structure
+The project uses styled-components with a theme system:
 
 ```typescript
 const theme = {
@@ -129,17 +124,46 @@ const theme = {
     primary: '#007bff',
     success: '#28a745',
     danger: '#dc3545',
-    // ... more colors
   },
   spacing: {
     xs: '0.25rem',
     sm: '0.5rem',
     md: '1rem',
-    // ... more spacing
+    lg: '1.5rem',
   },
-  // ... fonts, breakpoints, etc.
 };
 ```
+
+### Using Components
+
+```tsx
+import { Button, Card, Text } from './styles/components';
+
+function MyComponent() {
+  return (
+    <Card padding="lg">
+      <Text size="lg" weight="bold">
+        Hello World
+      </Text>
+      <Button variant="primary" size="md">
+        Click me
+      </Button>
+    </Card>
+  );
+}
+```
+
+## Contributing
+
+1. Fork the repo
+2. Create a feature branch
+3. Make your changes
+4. Run the tests
+5. Submit a pull request
+
+## License
+
+MIT
 
 ### Component Usage
 

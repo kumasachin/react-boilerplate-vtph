@@ -32,17 +32,17 @@ const CodeBlock = styled.pre`
 `;
 
 const technologies = [
-  { name: 'React 18', description: 'The latest and greatest React' },
-  { name: 'TypeScript', description: 'JavaScript that actually works' },
-  { name: 'Vite', description: 'Build tool that doesn&apos;t suck' },
-  { name: 'Styled Components', description: 'CSS that lives with your components' },
-  { name: 'Zustand', description: 'State management without Redux drama' },
-  { name: 'React Router', description: 'Navigation that just works' },
-  { name: 'Apollo Client', description: 'GraphQL made easy' },
-  { name: 'Vitest', description: 'Tests that run fast' },
-  { name: 'Playwright', description: 'E2E testing across browsers' },
-  { name: 'ESLint', description: 'Keeps your code clean' },
-  { name: 'Husky', description: 'Git hooks that enforce quality' },
+  { name: 'React 18', description: 'Modern React with concurrent features' },
+  { name: 'TypeScript', description: 'Static type checking for JavaScript' },
+  { name: 'Vite', description: 'Fast build tool and development server' },
+  { name: 'Styled Components', description: 'CSS-in-JS styling solution' },
+  { name: 'Zustand', description: 'Lightweight state management' },
+  { name: 'React Router', description: 'Declarative routing for React' },
+  { name: 'Apollo Client', description: 'GraphQL client with caching' },
+  { name: 'Vitest', description: 'Fast unit testing framework' },
+  { name: 'Playwright', description: 'Cross-browser end-to-end testing' },
+  { name: 'ESLint', description: 'JavaScript linting utility' },
+  { name: 'Husky', description: 'Git hooks for code quality' },
 ];
 
 export const AboutPage: React.FC = () => {
@@ -54,23 +54,23 @@ export const AboutPage: React.FC = () => {
             About This Starter
           </Heading>
           <Text size="lg" style={{ textAlign: 'center', marginBottom: '48px' }}>
-            A React template that doesn&apos;t waste your time
+            A modern React template with TypeScript and developer tools
           </Text>
         </AboutSection>
 
         <AboutSection>
           <Card padding="lg">
             <Heading level={2} style={{ marginBottom: '16px' }}>
-              🎯 Why This Exists
+              🎯 Project Overview
             </Heading>
             <Text style={{ marginBottom: '16px' }}>
-              I got tired of setting up the same tools over and over again for every React project.
-              This template has everything configured and ready to go - TypeScript, testing,
-              linting, styling, state management, the works.
+              This starter template provides a foundation for building React applications with
+              modern tools and best practices. It includes TypeScript for type safety, testing
+              frameworks for quality assurance, and development tools for productivity.
             </Text>
             <Text>
-              No more spending hours on boilerplate. Just clone, install, and start building your
-              actual app.
+              The template is configured with common patterns and conventions to help you start
+              building your application immediately.
             </Text>
           </Card>
         </AboutSection>

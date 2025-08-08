@@ -85,7 +85,7 @@ describe('TodoForm', () => {
     const submitButton = screen.getByRole('button', { name: 'Add Todo' });
     await user.click(submitButton);
 
-    expect(screen.getByRole('alert')).toHaveTextContent('Come on, type something!');
+    expect(screen.getByRole('alert')).toHaveTextContent('Please enter a todo item');
     expect(mockAddTodo).not.toHaveBeenCalled();
   });
 
@@ -99,7 +99,7 @@ describe('TodoForm', () => {
     await user.type(input, 'Hi');
     await user.click(submitButton);
 
-    expect(screen.getByRole('alert')).toHaveTextContent('Make it at least 3 characters');
+    expect(screen.getByRole('alert')).toHaveTextContent('Minimum 3 characters required');
     expect(mockAddTodo).not.toHaveBeenCalled();
   });
 
@@ -114,7 +114,7 @@ describe('TodoForm', () => {
     await user.type(input, longText);
     await user.click(submitButton);
 
-    expect(screen.getByRole('alert')).toHaveTextContent('Whoa there, keep it under 100 characters');
+    expect(screen.getByRole('alert')).toHaveTextContent('Maximum 100 characters allowed');
     expect(mockAddTodo).not.toHaveBeenCalled();
   });
 
