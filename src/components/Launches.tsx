@@ -71,7 +71,7 @@ export const Launches: React.FC<LaunchesProps> = ({ limit = 12 }) => {
     return (
       <ErrorContainer>
         <Heading level={3} color="primary">
-          Oops! Something went wrong
+          Failed to Load Data
         </Heading>
         <Text style={{ color: 'inherit', marginTop: '8px' }}>{error.message}</Text>
         <button

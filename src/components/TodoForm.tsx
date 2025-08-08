@@ -25,17 +25,17 @@ export const TodoForm: React.FC<TodoFormProps> = ({ className }) => {
 
     const trimmedText = text.trim();
     if (!trimmedText) {
-      setError('Come on, type something!');
+      setError('Please enter a todo item');
       return;
     }
 
     if (trimmedText.length < 3) {
-      setError('Make it at least 3 characters');
+      setError('Minimum 3 characters required');
       return;
     }
 
     if (trimmedText.length > 100) {
-      setError('Whoa there, keep it under 100 characters');
+      setError('Maximum 100 characters allowed');
       return;
     }
 
@@ -46,7 +46,7 @@ export const TodoForm: React.FC<TodoFormProps> = ({ className }) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
-    if (error) setError(''); // Clear error when they start typing
+    if (error) setError(''); // Clear error when user starts typing
   };
 
   return (

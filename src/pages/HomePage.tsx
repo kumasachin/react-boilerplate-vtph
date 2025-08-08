@@ -69,24 +69,24 @@ const features = [
     techs: ['Vitest', 'Playwright'],
   },
   {
-    title: '🎨 Decent Styling',
-    description: 'Styled components with a theme system that actually makes sense.',
+    title: '🎨 Styled Components',
+    description: 'Modern CSS-in-JS with a comprehensive theme system.',
     techs: ['Styled Components', 'Design System'],
   },
   {
-    title: '🔄 Simple State',
-    description: 'Zustand for state management. Redux without the ceremony.',
+    title: '🔄 State Management',
+    description: 'Zustand provides simple and effective state management.',
     techs: ['Zustand', 'TypeScript'],
   },
   {
-    title: '🌐 GraphQL Included',
-    description: 'Apollo Client setup so you can fetch data like a pro.',
+    title: '🌐 GraphQL Ready',
+    description: 'Apollo Client configured for GraphQL data fetching.',
     techs: ['Apollo Client', 'GraphQL'],
   },
   {
-    title: '♿ Works for Everyone',
-    description: 'Accessibility baked in. Screen readers, keyboards, the works.',
-    techs: ['ARIA', 'Keyboard Nav'],
+    title: '♿ Accessibility',
+    description: 'Built with accessibility standards and best practices.',
+    techs: ['ARIA', 'Keyboard Navigation'],
   },
 ];
 
@@ -105,7 +105,7 @@ export const HomePage: React.FC = () => {
             React Starter Kit
           </Heading>
           <Text size="xl" style={{ marginBottom: '32px', color: 'inherit', opacity: 0.9 }}>
-            Everything you need to build React apps, without the headaches
+            A modern React template with TypeScript, testing, and developer tools
           </Text>
           <Flex gap="md" justify="center">
             <Button as={Link} to="/todos" variant="secondary" size="lg">
@@ -286,8 +286,8 @@ export const HomePage: React.FC = () => {
             Get Started
           </Heading>
           <Text style={{ marginBottom: '32px', maxWidth: '600px', margin: '0 auto 32px' }}>
-            This template includes everything you need to build modern React applications. Clone the
-            repository and start building your next project!
+            This template provides everything you need to build modern React applications. Start
+            developing your next project right away.
           </Text>
           <Flex gap="md" justify="center">
             <Button as={Link} to="/todos" variant="primary" size="lg">

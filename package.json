@@ -1,6 +1,6 @@
 {
   "name": "react-starter-kit",
-  "description": "A React starter template with TypeScript, testing, and all the good stuff. Auto-versioned and production-ready.",
+  "description": "A modern React starter template with TypeScript, testing, and developer tools configured.",
   "private": true,
   "version": "1.0.1",
   "type": "module",
