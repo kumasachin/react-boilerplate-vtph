@@ -1,6 +1,6 @@
-import React from 'react';
+import type React from 'react';
 import styled from 'styled-components';
-import { Container, Heading, Text, Card, Flex } from '../styles/components';
+import { Card, Container, Flex, Heading, Text } from '../styles/components';
 
 const AboutSection = styled.section`
   margin-bottom: ${({ theme }) => theme.spacing['2xl']};

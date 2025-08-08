@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { useTodoStore } from '../store';
-import { Button, Input, Flex, Text } from '../styles/components';
+import { Button, Flex, Input, Text } from '../styles/components';
 
 const Form = styled.form`
   margin-bottom: ${({ theme }) => theme.spacing.xl};

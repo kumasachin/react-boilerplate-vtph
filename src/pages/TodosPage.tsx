@@ -1,7 +1,7 @@
-import React from 'react';
-import { Container, Heading } from '../styles/components';
+import type React from 'react';
 import { TodoForm } from '../components/TodoForm';
 import { TodoList } from '../components/TodoList';
+import { Container, Heading } from '../styles/components';
 
 export const TodosPage: React.FC = () => {
   return (

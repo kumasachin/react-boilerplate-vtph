@@ -1,5 +1,5 @@
-import { describe, it, expect, beforeEach } from 'vitest';
-import { useTodoStore, useAuthStore } from '../index';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { useAuthStore, useTodoStore } from '../index';
 
 describe('Todo Store', () => {
   beforeEach(() => {
@@ -27,10 +27,10 @@ describe('Todo Store', () => {
 
     const { todos } = useTodoStore.getState();
     expect(todos).toHaveLength(1);
-    expect(todos[0].text).toBe('Test todo');
-    expect(todos[0].completed).toBe(false);
-    expect(todos[0].id).toBeDefined();
-    expect(todos[0].createdAt).toBeInstanceOf(Date);
+    expect(todos[0]?.text).toBe('Test todo');
+    expect(todos[0]?.completed).toBe(false);
+    expect(todos[0]?.id).toBeDefined();
+    expect(todos[0]?.createdAt).toBeInstanceOf(Date);
   });
 
   it('should toggle todo completion', () => {

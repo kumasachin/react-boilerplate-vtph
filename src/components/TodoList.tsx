@@ -1,6 +1,6 @@
-import React from 'react';
+import type React from 'react';
 import styled from 'styled-components';
-import { useTodoStore, type Todo } from '../store';
+import { type Todo, useTodoStore } from '../store';
 import { Button, Flex, Text } from '../styles/components';
 
 const TodoItem = styled.div<{ completed: boolean }>`
@@ -47,7 +47,7 @@ export const TodoComponent: React.FC<TodoComponentProps> = ({ todo }) => {
   };
 
   return (
-    <TodoItem completed={todo.completed} role="listitem">
+    <TodoItem as="li" completed={todo.completed}>
       <Checkbox
         checked={todo.completed}
         onChange={handleToggle}
@@ -133,7 +133,7 @@ export const TodoList: React.FC<TodoListProps> = ({ className }) => {
         )}
       </FilterButtons>
 
-      <TodoListContainer role="list" aria-label="Todo list">
+      <TodoListContainer as="ul" aria-label="Todo list">
         {filteredTodos.length === 0 ? (
           <Text color="muted">
             {filter === 'all' ? 'No todos yet. Add one above!' : `No ${filter} todos.`}
