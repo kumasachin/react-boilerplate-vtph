@@ -1,9 +1,24 @@
 {
-  "name": "react-starter-kit",
-  "description": "A modern React starter template with TypeScript, testing, and developer tools configured.",
+  "name": "react-typescript-boilerplate",
+  "description": "A modern React TypeScript boilerplate with Vite, Biome, testing, and production-ready setup",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.0",
   "type": "module",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "typescript",
+    "vite",
+    "biome",
+    "vitest",
+    "playwright",
+    "styled-components",
+    "zustand",
+    "apollo-client",
+    "boilerplate",
+    "template"
+  ],
   "packageManager": "pnpm@9.7.0",
   "engines": {
     "node": ">=22.12.0",

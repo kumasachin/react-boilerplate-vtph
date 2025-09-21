@@ -1,22 +1,267 @@
-# React Starter Kit
+# React TypeScript Boilerplate 🚀
 
-A no-nonsense React template that gets you coding fast. Everything you need, nothing you don't.
+A modern, production-ready React TypeScript boilerplate with everything you need to build scalable web applications in 2025.
 
-## What's Included
+## ✨ Features
 
-### Core Stack
+### 🏗️ **Core Stack**
 
-- **React 19** - The latest and greatest with concurrent features
-- **TypeScript** - Better code, fewer bugs with enhanced strict mode
-- **Vite 7** - Lightning-fast builds with optimized code splitting
-- **Styled Components** - CSS-in-JS done right
+- **React 19** - Latest React with concurrent features
+- **TypeScript** - Type-safe development experience
+- **Vite** - Lightning-fast build tool and dev server
+- **pnpm** - Fast, disk space efficient package manager
 
-### State & Data
+### 🎨 **Styling & UI**
 
-- **Zustand** - Simple state management
-- **Apollo Client** - GraphQL made easy
-- **React Router** - Client-side routing
-- **Zod + React Hook Form** - Runtime type validation with modern forms
+- **Styled Components** - CSS-in-JS with theming support
+- **Modern CSS** - CSS Variables, Grid, Flexbox
+- **Responsive Design** - Mobile-first approach
+
+### 🧪 **Testing Suite**
+
+- **Vitest** - Fast unit testing with Jest compatibility
+- **Testing Library** - Simple and complete testing utilities
+- **Playwright** - Reliable end-to-end testing
+- **jest-axe** - Accessibility testing
+
+### 📦 **State Management & Data**
+
+- **Zustand** - Lightweight state management
+- **Apollo Client** - GraphQL client with caching
+- **React Hook Form** - Performant forms with validation
+- **Zod** - Type-safe schema validation
+
+### 🔧 **Developer Experience**
+
+- **Biome** - Fast linting and formatting (replaces ESLint + Prettier)
+- **TypeScript** - Full type safety across the project
+- **Husky** - Git hooks for code quality
+- **Lint-staged** - Run linters on staged files
+- **Automatic versioning** - Semantic versioning scripts
+
+### 🚀 **Production Ready**
+
+- **Vite build optimization** - Tree shaking, code splitting
+- **Performance monitoring** - Web Vitals integration
+- **Error boundaries** - Graceful error handling
+- **Environment configurations** - Development and production setups
+
+## 🎯 Quick Start
+
+### Option 1: Use the Template Script (Recommended)
+
+```bash
+# Clone this repository
+git clone https://github.com/yourusername/react-typescript-boilerplate.git
+cd react-typescript-boilerplate
+
+# Create a new project
+./create-template.sh my-awesome-app
+
+# Navigate to your new project
+cd my-awesome-app
+
+# Start development
+pnpm dev
+```
+
+### Option 2: Manual Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/react-typescript-boilerplate.git my-app
+cd my-app
+
+# Remove the original git history
+rm -rf .git
+
+# Initialize your own git repository
+git init
+git add .
+git commit -m "Initial commit"
+
+# Install dependencies
+pnpm install
+
+# Start development
+pnpm dev
+```
+
+## 📋 Available Scripts
+
+| Command              | Description                                       |
+| -------------------- | ------------------------------------------------- |
+| `pnpm dev`           | Start development server at http://localhost:5173 |
+| `pnpm build`         | Build for production                              |
+| `pnpm preview`       | Preview production build locally                  |
+| `pnpm test`          | Run unit tests with Vitest                        |
+| `pnpm test:ui`       | Run tests with UI interface                       |
+| `pnpm test:coverage` | Run tests with coverage report                    |
+| `pnpm test:e2e`      | Run end-to-end tests with Playwright              |
+| `pnpm test:e2e:ui`   | Run E2E tests with UI interface                   |
+| `pnpm lint`          | Check code with Biome                             |
+| `pnpm lint:fix`      | Fix code issues automatically                     |
+| `pnpm format`        | Format code with Biome                            |
+| `pnpm check`         | Run comprehensive code check                      |
+| `pnpm analyze`       | Analyze bundle size                               |
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ErrorBoundary.tsx
+│   ├── Navigation.tsx
+│   └── __tests__/      # Component tests
+├── pages/              # Page components
+│   ├── HomePage.tsx
+│   ├── AboutPage.tsx
+│   └── TodosPage.tsx
+├── store/              # Zustand stores
+│   ├── index.ts
+│   └── __tests__/
+├── styles/             # Styled components and themes
+│   ├── GlobalStyles.ts
+│   ├── theme.ts
+│   └── components.ts
+├── graphql/            # GraphQL queries and client setup
+│   ├── client.ts
+│   ├── queries.ts
+│   └── types.ts
+├── utils/              # Utility functions
+├── types/              # TypeScript type definitions
+├── test/               # Test setup and utilities
+├── App.tsx             # Main application component
+└── main.tsx            # Application entry point
+```
+
+## 🛠️ Configuration Files
+
+- **`biome.json`** - Biome configuration for linting and formatting
+- **`tsconfig.json`** - TypeScript configuration
+- **`vite.config.ts`** - Vite build configuration
+- **`playwright.config.ts`** - Playwright E2E testing configuration
+- **`vitest.config.ts`** - Vitest unit testing configuration (inherited from Vite)
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Netlify
+
+```bash
+# Build the project
+pnpm build
+
+# Deploy the dist folder to Netlify
+```
+
+### Docker
+
+```dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "run", "preview"]
+```
+
+## 🎨 Customization
+
+### 1. Update Branding
+
+- Modify `index.html` title and meta tags
+- Update `public/vite.svg` with your logo
+- Customize colors in `src/styles/theme.ts`
+
+### 2. Environment Variables
+
+Create `.env.local`:
+
+```env
+VITE_API_URL=your-api-url
+VITE_GRAPHQL_ENDPOINT=your-graphql-endpoint
+```
+
+### 3. Add New Pages
+
+1. Create component in `src/pages/`
+2. Add route in `src/App.tsx`
+3. Add navigation link in `src/components/Navigation.tsx`
+
+### 4. State Management
+
+- **Local state**: Use `useState` and `useReducer`
+- **Global state**: Add stores in `src/store/`
+- **Server state**: Use Apollo Client hooks
+
+## 🧪 Testing Strategy
+
+### Unit Tests
+
+- Components: Test rendering and user interactions
+- Utilities: Test pure functions and helpers
+- Stores: Test state management logic
+
+### Integration Tests
+
+- Page components with routing
+- Forms with validation
+- API integration with mocked responses
+
+### E2E Tests
+
+- User workflows
+- Cross-browser compatibility
+- Performance testing
+
+## 📚 Learning Resources
+
+- [React Documentation](https://react.dev/)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
+- [Vite Guide](https://vitejs.dev/guide/)
+- [Biome Documentation](https://biomejs.dev/)
+- [Vitest Guide](https://vitest.dev/guide/)
+- [Playwright Documentation](https://playwright.dev/)
+- [Styled Components](https://styled-components.com/)
+- [Zustand Documentation](https://github.com/pmndrs/zustand)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙋‍♂️ Support
+
+If you have any questions or run into issues:
+
+1. Check the [Issues](https://github.com/yourusername/react-typescript-boilerplate/issues) page
+2. Create a new issue with detailed information
+3. Join our community discussions
+
+---
+
+**Happy coding!** 🎉
+
+Built with ❤️ for the React community.
 
 ### Testing Suite
 
