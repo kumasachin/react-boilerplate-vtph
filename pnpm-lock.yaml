@@ -42,9 +42,6 @@ importers:
       '@biomejs/biome':
         specifier: ^2.1.4
         version: 2.1.4
-      '@eslint/js':
-        specifier: ^9.32.0
-        version: 9.33.0
       '@playwright/test':
         specifier: ^1.54.2
         version: 1.54.2
@@ -81,9 +78,6 @@ importers:
       '@vitest/ui':
         specifier: 3.2.4
         version: 3.2.4(vitest@3.2.4)
-      globals:
-        specifier: ^16.3.0
-        version: 16.3.0
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -102,9 +96,6 @@ importers:
       vite:
         specifier: ^7.1.0
         version: 7.1.1(@types/node@24.2.1)(yaml@2.8.1)
-      vite-bundle-analyzer:
-        specifier: ^1.2.0
-        version: 1.2.0
       vitest:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@24.2.1)(@vitest/ui@3.2.4)(jsdom@26.1.0)(yaml@2.8.1)
@@ -478,10 +469,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
-
-  '@eslint/js@9.33.0':
-    resolution: {integrity: sha512-5K1/mKhWaMfreBGJTwval43JJmkip0RmM+3+IuqupeSKNC/Th2Kc7ucaq5ovTSra/OOKB9c58CGSz3QMVbWt0A==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@graphql-typed-document-node/core@3.2.0':
     resolution: {integrity: sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==}
@@ -1106,10 +1093,6 @@ packages:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
     hasBin: true
 
-  globals@16.3.0:
-    resolution: {integrity: sha512-bqWEnJ1Nt3neqx2q5SFfGS8r/ahumIakg3HcwtNlrVlwXIeNumWn/c7Pn/wKzGhf6SaW6H6uWXLqC30STCMchQ==}
-    engines: {node: '>=18'}
-
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
@@ -1714,10 +1697,6 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  vite-bundle-analyzer@1.2.0:
-    resolution: {integrity: sha512-RYvfTw06KVw5rOgdBvpCYF49IlXSRs0/2ED36uDK5l0Y/hW+AUMSFQba7jyPflZkDuBlhHl0TuMpl9UT3lmqdg==}
-    hasBin: true
-
   vite-node@3.2.4:
     resolution: {integrity: sha512-EbKSKh+bh1E1IFxeO0pg1n4dvoOTt0UDiXMd/qn++r98+jPO1xtJilvXldeuQ8giIB5IkpjCgMleHMNEsGH6pg==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
@@ -2185,8 +2164,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.8':
     optional: true
-
-  '@eslint/js@9.33.0': {}
 
   '@graphql-typed-document-node/core@3.2.0(graphql@16.11.0)':
     dependencies:
@@ -2795,8 +2772,6 @@ snapshots:
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
       path-scurry: 1.11.1
-
-  globals@16.3.0: {}
 
   graceful-fs@4.2.11: {}
 
@@ -3412,8 +3387,6 @@ snapshots:
       browserslist: 4.25.1
       escalade: 3.2.0
       picocolors: 1.1.1
-
-  vite-bundle-analyzer@1.2.0: {}
 
   vite-node@3.2.4(@types/node@24.2.1)(yaml@2.8.1):
     dependencies:
